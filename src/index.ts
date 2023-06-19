@@ -17,7 +17,7 @@ type Foo = <
   bar: A
 ) => StateCreator<T, Mps, [["foo", A], ...Mcs]>;
 
-declare module "zustand" {
+declare module "zustand/vanilla" {
   interface StoreMutators<S, A> {
     foo: Write<Cast<S, object>, { foo: A }>;
   }
